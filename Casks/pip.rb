@@ -8,7 +8,7 @@ cask "pip" do
   homepage "https://github.com/hanbong5938/pip"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Pip.app"
 
