@@ -1,6 +1,6 @@
 cask "pip" do
-  version "1.0.0-preview.2"
-  sha256 "abc8468e3928107788af7d719c9acf5e15b6bd854dbda65c1dbed052f053d932"
+  version "1.0.0-preview.3"
+  sha256 "6c1694bf213d6055269297c349471f3d2218292fb6043836f005bac79fb5231d"
 
   url "https://github.com/hanbong5938/pip/releases/download/v#{version}/PiP-v#{version}-macos-arm64.zip"
   name "PiP"
