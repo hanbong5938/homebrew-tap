@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
   desc "Native desktop companion for Herdr with session activity and agent messaging"
   homepage "https://github.com/hanbong5938/herdr-desktop-pet"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.1.6/HerdrDesktopPet-v0.1.6-macos-arm64.tar.gz"
-  sha256 "0bcd05cfb4fa386fa8fd4a637f164ef03d1ee265eec171b997277214783e1d03"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.1.7/HerdrDesktopPet-v0.1.7-macos-arm64.tar.gz"
+  sha256 "c2033f8dc07653c5fb6e66d1e06dea2cf8d5d88372888c4a4ce8643f475c97c8"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
