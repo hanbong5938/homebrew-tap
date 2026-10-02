@@ -1,6 +1,6 @@
 cask "herdr-desktop-pet" do
-  version "0.1.4"
-  sha256 "7566e6223723c68f0d690eea7acfc769c43183de537bdc4a26aef9947900a5fa"
+  version "0.1.6"
+  sha256 "0bcd05cfb4fa386fa8fd4a637f164ef03d1ee265eec171b997277214783e1d03"
 
   url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v#{version}/HerdrDesktopPet-v#{version}-macos-arm64.tar.gz"
   name "Herdr Desktop Pet"
