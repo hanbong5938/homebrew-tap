@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
   desc "Native desktop companion for Herdr with session activity and agent messaging"
   homepage "https://github.com/hanbong5938/herdr-desktop-pet"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.2.1/HerdrDesktopPet-v0.2.1-macos-arm64.tar.gz"
-  sha256 "421d93ffb51befc6735bff7e65fc65aa787ea2c7fc238900f154296fe9bd2b05"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.2/HerdrDesktopPet-v0.3.2-macos-arm64.tar.gz"
+  sha256 "8c55564b5bb16a1ec38463e7582b906612bdc66aa64e148beeffdd88ff4b59c9"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -26,8 +26,12 @@ class HerdrDesktopPet < Formula
                          "{{libexec}}/HerdrDesktopPet.app/Contents/Frameworks/libherdr_rig.dylib"],
         writable_paths: ["{{libexec}}/HerdrDesktopPet.app"]
     run "/usr/bin/codesign",
-        args:           ["--force", "--timestamp=none", "--sign", "-",
+        args:           ["--force", "--timestamp=none", "--preserve-metadata=entitlements", "--sign", "-",
                          "{{libexec}}/HerdrDesktopPet.app/Contents/MacOS/rig-decode-worker"],
+        writable_paths: ["{{libexec}}/HerdrDesktopPet.app"]
+    run "/usr/bin/codesign",
+        args:           ["--force", "--timestamp=none", "--sign", "-",
+                         "{{libexec}}/HerdrDesktopPet.app/Contents/MacOS/herdr-update-coordinator"],
         writable_paths: ["{{libexec}}/HerdrDesktopPet.app"]
     run "/usr/bin/codesign",
         args:           ["--force", "--timestamp=none", "--sign", "-",
