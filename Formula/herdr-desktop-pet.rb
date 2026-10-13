@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
-  desc "Native desktop companion for Herdr with session activity and agent messaging"
+  desc "Native desktop companion for Herdr and Tern with agent messaging"
   homepage "https://github.com/hanbong5938/herdr-desktop-pet"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.5/HerdrDesktopPet-v0.3.5-macos-arm64.tar.gz"
-  sha256 "13205c3bf5cb4055ef00fe6adf5720c833fdd168c7aa12284672b766a50f3664"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.6/HerdrDesktopPet-v0.3.6-macos-arm64.tar.gz"
+  sha256 "5d40f6ada23f7d91d967a98331b28ea767202f5d01b7cd7732b2d9e543fdaafa"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -49,6 +49,12 @@ class HerdrDesktopPet < Formula
       This installs only the app and CLI under Homebrew's prefix (not /Applications).
       It does not install the Herdr plugin; for that run:
         herdr plugin install hanbong5938/herdr-desktop-pet
+      Tern requires its separate plugin:
+        tern plugin install https://github.com/hanbong5938/tern-desktop-pet
+      Start an independent Tern profile with:
+        herdr-desktop-pet --host tern --config-dir ~/.config/herdr/plugins/config/desktop-pet-tern --state-dir ~/.local/state/herdr/plugins/desktop-pet-tern start
+      Configure desktop pet connection in Tern using this CLI and the same paths.
+      Plugin installation alone does not install or start the native app.
       It does not install a patched Herdr host either.
       Client-attach auto-start requires the supplied Herdr 0.9.3 host patch.
       The app is ad-hoc signed, not Developer ID signed or notarized.
