@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
   desc "Bounded legacy migration bridge to the independent Desktop Pet app"
   homepage "https://github.com/hanbong5938/desktop-pet/blob/main/docs/migrations/desktop-pet.md"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.9/HerdrDesktopPet-v0.3.9-macos-arm64.tar.gz"
-  sha256 "061dc6cb04e1512db90f0ffe1e9e261fd2be0935924e189ca0c7f8ce3c43808c"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.10/HerdrDesktopPet-v0.3.10-macos-arm64.tar.gz"
+  sha256 "a75f4219f1d8bc7ef8c3bee29c030b0cd6c06853bab4e193e40838ef5d49b927"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
