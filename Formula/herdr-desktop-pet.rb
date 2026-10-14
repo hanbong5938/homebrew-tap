@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
   desc "Bounded legacy migration bridge to the independent Desktop Pet app"
   homepage "https://github.com/hanbong5938/desktop-pet/blob/main/docs/migrations/desktop-pet.md"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.8/HerdrDesktopPet-v0.3.8-macos-arm64.tar.gz"
-  sha256 "fc1d69dab9e9287dcb9903bc262b1b2e0ba06690c1b944230b81439b4ff09003"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.9/HerdrDesktopPet-v0.3.9-macos-arm64.tar.gz"
+  sha256 "061dc6cb04e1512db90f0ffe1e9e261fd2be0935924e189ca0c7f8ce3c43808c"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -45,7 +45,7 @@ class HerdrDesktopPet < Formula
 
   def caveats
     <<~EOS
-      Legacy migration bridge only: 0.3.8 / protocol 3 / observation capability 1.
+      Legacy migration bridge only: 0.3.9 / protocol 3 / observation capability 1.
       New installations should use: brew install hanbong5938/tap/desktop-pet
       Existing v0.3.6 users finish their separately consented A update before B.
       In the running bridge, approve the separate native migration to Desktop Pet.
