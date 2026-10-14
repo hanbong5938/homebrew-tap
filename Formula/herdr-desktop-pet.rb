@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
-  desc "Native desktop companion for Herdr and Tern with agent messaging"
-  homepage "https://github.com/hanbong5938/herdr-desktop-pet"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.6/HerdrDesktopPet-v0.3.6-macos-arm64.tar.gz"
-  sha256 "5d40f6ada23f7d91d967a98331b28ea767202f5d01b7cd7732b2d9e543fdaafa"
+  desc "Bounded legacy migration bridge to the independent Desktop Pet app"
+  homepage "https://github.com/hanbong5938/desktop-pet/blob/main/docs/migrations/desktop-pet.md"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.7/HerdrDesktopPet-v0.3.7-macos-arm64.tar.gz"
+  sha256 "aa2a2441e2c087efe07287342cbb9c3f31ab13c7fddc7d0abc9ca63ce0d9b16e"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -45,21 +45,20 @@ class HerdrDesktopPet < Formula
 
   def caveats
     <<~EOS
-      Start manually with: herdr-desktop-pet start
-      This installs only the app and CLI under Homebrew's prefix (not /Applications).
-      It does not install the Herdr plugin; for that run:
-        herdr plugin install hanbong5938/herdr-desktop-pet
-      Tern requires its separate plugin:
-        tern plugin install https://github.com/hanbong5938/tern-desktop-pet
-      Start an independent Tern profile with:
-        herdr-desktop-pet --host tern --config-dir ~/.config/herdr/plugins/config/desktop-pet-tern --state-dir ~/.local/state/herdr/plugins/desktop-pet-tern start
-      Configure desktop pet connection in Tern using this CLI and the same paths.
-      Plugin installation alone does not install or start the native app.
-      It does not install a patched Herdr host either.
-      Client-attach auto-start requires the supplied Herdr 0.9.3 host patch.
+      Legacy migration bridge only: 0.3.7 / protocol 3 / observation capability 1.
+      New installations should use: brew install hanbong5938/tap/desktop-pet
+      Existing v0.3.6 users finish their separately consented A update before B.
+      In the running bridge, approve the separate native migration to Desktop Pet.
+      Preserve the exact config/state paths; do not merge unrelated profiles.
+      Legacy retirement occurs only after the verified neutral image is ready.
+      User Stop suppresses restart; Unknown outcomes are never automatically replayed.
+      Protocol-2 beta users must use their retained helper, Stop and back up,
+      then explicitly install the frozen pinned v0.3.6 pair before A-to-B.
+      This moving formula is not the frozen v0.3.6 installer; beta stays unchanged.
+      Default Herdr plugin installation uses integration-only main, not this tag.
+      Optional Herdr/Tern integrations do not own or remove the shared app.
       The app is ad-hoc signed, not Developer ID signed or notarized.
-      Migrating from the old cask? Remove it first:
-        brew uninstall --cask herdr-desktop-pet
+      Procedure: https://github.com/hanbong5938/desktop-pet/blob/main/docs/migrations/desktop-pet.md
     EOS
   end
 
