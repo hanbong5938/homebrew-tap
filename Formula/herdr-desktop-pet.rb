@@ -1,8 +1,8 @@
 class HerdrDesktopPet < Formula
   desc "Bounded legacy migration bridge to the independent Desktop Pet app"
   homepage "https://github.com/hanbong5938/desktop-pet/blob/main/docs/migrations/desktop-pet.md"
-  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.10/HerdrDesktopPet-v0.3.10-macos-arm64.tar.gz"
-  sha256 "a75f4219f1d8bc7ef8c3bee29c030b0cd6c06853bab4e193e40838ef5d49b927"
+  url "https://github.com/hanbong5938/herdr-desktop-pet/releases/download/v0.3.11/HerdrDesktopPet-v0.3.11-macos-arm64.tar.gz"
+  sha256 "2075baefbf212f5cbfbdc0163ce0e6887fa6d05f20e2a24c47ae24012649ab60"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -45,10 +45,11 @@ class HerdrDesktopPet < Formula
 
   def caveats
     <<~EOS
-      Legacy migration bridge only: 0.3.9 / protocol 3 / observation capability 1.
+      Legacy migration bridge only: 0.3.11 / protocol 3 / observation capability 1.
       New installations should use: brew install hanbong5938/tap/desktop-pet
-      Existing v0.3.6 users finish their separately consented A update before B.
-      In the running bridge, approve the separate native migration to Desktop Pet.
+      Existing v0.3.10 users finish their separately consented A′ update before B.
+      Older v0.3.6 users retain their separate compatibility A update route.
+      In the running bridge, approve the separate native migration to Desktop Pet 0.4.7.
       Preserve the exact config/state paths; do not merge unrelated profiles.
       Legacy retirement occurs only after the verified neutral image is ready.
       User Stop suppresses restart; Unknown outcomes are never automatically replayed.

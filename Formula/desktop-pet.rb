@@ -1,8 +1,8 @@
 class DesktopPet < Formula
   desc "Shared native desktop companion with optional Herdr and Tern adapters"
   homepage "https://hanbong5938.github.io/desktop-pet/"
-  url "https://github.com/hanbong5938/desktop-pet/releases/download/v0.4.5/DesktopPet-v0.4.5-macos-arm64.tar.gz"
-  sha256 "41024ed9d82e5be7169c166bcd6e443c319f6b8916cad63b8399cd4ad02bb45a"
+  url "https://github.com/hanbong5938/desktop-pet/releases/download/v0.4.7/DesktopPet-v0.4.7-macos-arm64.tar.gz"
+  sha256 "f89ea6c52197bd4c7fb70336846099f1e5eb553f2de9bb4cd43b14b1134da8fa"
   # Software is MIT; bundled artwork is not MIT-licensed.
   license :cannot_represent
 
@@ -10,15 +10,15 @@ class DesktopPet < Formula
   depends_on macos: :ventura
 
   resource "release-rig-provenance" do
-    url "https://github.com/hanbong5938/desktop-pet/releases/download/v0.4.5/DesktopPet-v0.4.5-rig-native.json"
-    sha256 "eaee6d36b71105acc50e6c7b2c2b5cb4b42692e09537785410e298074583b34b"
+    url "https://github.com/hanbong5938/desktop-pet/releases/download/v0.4.7/DesktopPet-v0.4.7-rig-native.json"
+    sha256 "2d28f7be1a5f83e6d0d1cc8bfc96727c0ca7c38546423ca7bb526d434a6b794b"
   end
 
   def install
     # Homebrew stages the single top-level app directory as Contents.
     (libexec/"DesktopPet.app").install "Contents"
     resource("release-rig-provenance").stage do
-      libexec.install "DesktopPet-v0.4.5-rig-native.json" => "DesktopPet.app.release-rig-native.json"
+      libexec.install "DesktopPet-v0.4.7-rig-native.json" => "DesktopPet.app.release-rig-native.json"
     end
     bin.write_exec_script libexec/"DesktopPet.app/Contents/MacOS/desktop-pet"
   end
